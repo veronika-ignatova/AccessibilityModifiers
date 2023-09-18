@@ -2,9 +2,9 @@
 {
     public abstract class OrderBase
     {
-        protected int OrderId {  get; set; }
-        protected int UserId { get; set; }
-        protected string ItemId {  get; set; }
+        public int OrderId {  get; set; }
+        public int UserId { get; set; }
+        public List<Item> ItemId {  get; set; }
         protected double Price 
         {
             get
