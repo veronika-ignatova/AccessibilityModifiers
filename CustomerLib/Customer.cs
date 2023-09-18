@@ -6,6 +6,7 @@
         {
             _firstName = firstName;
             _lastName = lastName;
+            UserName = UserName;
             return $"{firstName} {lastName}";
         }
     }

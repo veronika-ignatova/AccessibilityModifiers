@@ -10,7 +10,7 @@ namespace OrderLib
     {
         protected override void CreatingOrder()
         {
-            Console.WriteLine($"Order added with {ItemName}");
+            Console.WriteLine($"Order added with {ItemId}");
         }
     }
 }

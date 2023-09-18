@@ -1,12 +1,23 @@
 ﻿namespace OrderLib
 {
-    public abstract class OrderBase : Item
+    public abstract class OrderBase
     {
         protected int OrderId {  get; set; }
         protected int UserId { get; set; }
-        protected string ItemName {  get; set; }
-        protected int ItemPrice { get; set; }
-        protected int _discount;
+        protected string ItemId {  get; set; }
+        protected double Price 
+        {
+            get
+            {
+                return _price;
+            }
+            set
+            {
+                _price = _price * _discount / 100;
+            }
+        }
+        protected double _price;
+        protected double _discount;
         protected abstract void CreatingOrder();
     }
 }

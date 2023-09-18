@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CustomerLib
 {
-    public abstract class User : Order
+    public abstract class User
     {
         public string UserName
         {
@@ -17,20 +17,10 @@ namespace CustomerLib
             }
             set
             {
-                _fullName = _firstName + _lastName;
+                _fullName = _firstName + " " + _lastName;
             }
         }
-        private int OrderId 
-        { 
-            get 
-            {
-                return OrderId;
-            }
-            set
-            {
-                OrderId = value;
-            }
-        }
+        protected int OrderId {  get; set; }
         private string password;
         private string email;
         public string _firstName;

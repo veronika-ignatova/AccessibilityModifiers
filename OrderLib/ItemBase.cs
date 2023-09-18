@@ -11,8 +11,8 @@ namespace OrderLib
         protected string _name;
         protected string _description;
         protected int _price;
-        public int ItemId { get; set; }
-        public string Name 
+        protected int ItemId { get; set; }
+        protected string Name 
         { 
             get 
             {
@@ -23,9 +23,19 @@ namespace OrderLib
                 _name = value;
             } 
         }
-        public string Description { get; set; }
-        public int Price { get; set; }
-        public int Quantity { get; set; }
+        protected string Description { get; set; }
+        protected int Price
+        {
+            get
+            {
+                return _price;
+            }
+            set
+            {
+                _price = value;
+            }
+        }
+        protected int Quantity { get; set; }
         protected abstract void AddingItem();
 
     }
