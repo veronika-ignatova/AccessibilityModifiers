@@ -9,11 +9,7 @@
         {
             get
             {
-                return _price;
-            }
-            set
-            {
-                _price = _price * _discount / 100;
+                return _price * _discount / 100;
             }
         }
         protected double _price;
