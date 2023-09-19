@@ -1,13 +1,17 @@
 ﻿namespace CustomerLib
 {
-    public sealed class Customer : User
+    public class Customer : User, IUser
     {
-        public override string SetUserName(string firstName, string lastName)
+        public override void SetFullName(string firstName, string lastName)
         {
             _firstName = firstName;
             _lastName = lastName;
-            UserName = UserName;
-            return $"{firstName} {lastName}";
+            Console.WriteLine($"{_firstName} {_lastName}");
+        }
+
+        public string GetFirstName()
+        {
+            return _firstName;
         }
     }
 }

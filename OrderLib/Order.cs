@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace OrderLib
 {
-    public class Order : OrderBase
+    public sealed class Order : OrderBase
     {
-        protected override void CreatingOrder()
+        public override void CreatingOrder(int price, int discount = 10)
         {
-            Console.WriteLine($"Order added with {ItemId}");
+            _discount = discount;
+            _price = price;
+            Console.WriteLine($"Order added with discount {discount} and price {Price}");
         }
     }
 }

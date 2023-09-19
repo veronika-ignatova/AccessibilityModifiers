@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace OrderLib
 {
-    public class Item : ItemBase
+    public sealed class Item : ItemBase
     {
-        protected override void AddingItem()
+        public override void AddingItem(string name)
         {
+            _name = name;
             Console.WriteLine($"Item {Name} added.");
         }
     }
